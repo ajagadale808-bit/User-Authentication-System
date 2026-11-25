@@ -1,0 +1,25 @@
+### Test Server
+GET http://localhost:5000/
+
+### User Registration
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Aishwarya",
+  "email": "aishwarya@example.com",
+  "password": "Test@12345"
+}
+
+### User Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "aishwarya@example.com",
+  "password": "Test@12345"
+}
+
+### Access Protected Dashboard
+GET http://localhost:5000/api/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZiMDcxYzZhOGRkYjI3ODRjNjIzMjgzNSIsImlhdCI6MTc5NTYyODI5MiwiZXhwIjoxNzk1NjMxODkyfQ.2VpyAOGw6UHxzXiKXRg4EIaZGHbMxns5lMZok59Ncwg
